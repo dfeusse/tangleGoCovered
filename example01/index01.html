@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <base target="_top">
+    <title>Tangle: a JavaScript library for reactive documents</title>
+
+    <!-- stylesheets ? -->
+    <link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
+
+    <!-- $$$$ new files -->
+    <!-- Tangle -->
+    <script type="text/javascript" src="../../roark/Tangle-0.1.0/Tangle.js"></script>
+
+    <!-- TangleKit (optional) -->
+    <link rel="stylesheet" href="../../roark/Tangle-0.1.0/TangleKit/TangleKit.css" type="text/css">
+    <script type="text/javascript" src="../../roark/Tangle-0.1.0/TangleKit/mootools.js"></script>
+    <script type="text/javascript" src="../../roark/Tangle-0.1.0/TangleKit/sprintf.js"></script>
+    <script type="text/javascript" src="../../roark/Tangle-0.1.0/TangleKit/BVTouchable.js"></script>
+    <script type="text/javascript" src="../../roark/Tangle-0.1.0/TangleKit/TangleKit.js"></script>
+    <script type="text/javascript" src="ParkExample.js"></script>
+
+</head>
+
+<body>
+<div id="everything">
+
+
+<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+<!-- header -->
+
+<div id="header">
+	<h1> ------ Testing ----- </h1>
+<!--
+<h1><a href="./">tangle</a></h1>
+<h3>explorable explanations made easy</h3>
+
+<div class="menu">
+    <a href="guide.html">Getting Started</a> &nbsp; &nbsp;
+    <a href="reference.html">API Reference</a> &nbsp; &nbsp;
+    <a href="download.html">Download</a> &nbsp; &nbsp;
+    <a href="https://groups.google.com/group/tangle-talk/topics">Discuss</a>
+</div>
+-->
+
+</div> <!-- header -->
+    
+
+<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+<!-- body -->
+
+<div id="body">
+
+<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+<!-- park example -->
+
+<div class="example">
+	<div class="exampleTop"></div>
+	<div class="exampleCenter">
+		<div id="parkExample">
+
+		    <h5>Proposition 21:  Vehicle License Fee for State Parks</h5>
+		    
+		    <h6>The way it is now:</h6>
+		 
+		    <p>California has <span data-var="parkCount"></span> state parks, including state beaches and historic parks. 
+		        The current $<span data-var="oldBudget" data-format="e6"></span> million budget is insufficient to maintain these parks, 
+		        and <span data-var="oldClosedParkCount"></span> parks will be shut down at least part-time.
+		        Most parks charge <span data-var="oldAdmission" data-format="dollars"></span> per vehicle for admission.</p>
+
+		    <h6>What Prop 21 would do:</h6>
+		 
+		    <p>Proposes to charge car owners an extra $18 on their annual registration bill, to go into the state park fund.  Cars that pay the charge would have free park admission.</p>
+
+		    <h6>Analysis:</h6>
+
+		    <p>Suppose that an extra
+		        <span data-var="tax" data-format="$%d" class="TKAdjustableNumber" data-min="0" data-max="50"></span> was charged to
+		        <span data-var="percentCompliance" class="TKAdjustableNumber" data-min="0" data-max="100" data-step="5">%</span> of
+		        <span data-var="isTaxPerVehicle" class="TKToggle TKSwitch"><span>California taxpayers</span><span>vehicle registrations</span></span>.
+		        Park admission would be <span data-var="newAdmission" data-format="free" class="TKAdjustableNumber" data-min="0" data-max="25"></span> for
+		        <span data-var="newAdmissionAppliesToEveryone" class="TKToggle TKSwitch"><span>those who paid the charge</span><span>everyone</span></span>.
+		    </p>
+		    
+		    <p>This would <span data-var="deltaBudget" class="TKSwitchPositiveNegative"><span>collect an extra</span><span>lose</span></span>
+		        $<span data-var="deltaBudget" data-format="abs_e6"></span> million
+		        ($<span data-var="taxCollected" data-format="e6"></span> million from the tax,
+		        <span data-var="deltaRevenue" class="TKSwitchPositiveNegative"><span>plus</span><span>minus</span></span>
+		        $<span data-var="deltaRevenue" data-format="abs_e6"></span> million
+		        <span data-var="deltaRevenue" class="TKSwitchPositiveNegative"><span>additional</span><span>lost</span></span> revenue from admission)
+		        for a total state park budget of $<span data-var="budget" data-format="e6"></span> million.
+		        
+		    <span data-var="scenarioIndex" class="TKSwitch">
+		            <span>This is not sufficient to maintain the parks, and
+		                <span data-var="closedParkCount"></span>    parks would be shut down at least part-time.</span>
+		            <span>This is sufficient to maintain the parks in their current state, but not fund
+		                a program to bring safety and cleanliness up to acceptable standards.</span>
+		            <span>This is sufficient to maintain the parks in their current state, plus fund a program to 
+		                bring safety and cleanliness up to acceptable standards over the next
+		                <span data-var="restorationTime"></span> years.</span>
+		            <span>This is sufficient to maintain the parks and bring safety and cleanliness up to acceptable standards,
+		                leaving a $<span data-var="surplus" data-format="e6"></span> million per year surplus.</span>
+		        </span>
+		    </p>
+		    
+		    <p>Park attendance would
+		        <span data-var="deltaVisitorCount" class="TKSwitchPositiveNegative"><span>rise</span><span>fall</span></span> by
+		        <span data-var="relativeVisitorCount" data-format="percent"></span>, to
+		        <span data-var="newVisitorCount" data-format="e6"></span> million visits each year.</p>
+		</div>
+	</div>
+		
+	<div class="exampleBottom"></div>
+
+</div>
+
+<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+<!-- bottom -->
+
+<p>For a more extensive example, see <a href="http://worrydream.com/TenBrighterIdeas/">Ten Brighter Ideas</a>.</p>
+<p>For the motivation and philosophy behind reactive documents, see <a href="http://worrydream.com/ExplorableExplanations/">Explorable Explanations</a>.</p>
+<p>Or learn how to <a href="guide.html">get started with Tangle</a>.</p>
+
+
+<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+<!-- attention whoring -->
+
+<p style="margin-top:20px;"><a href="http://twitter.com/share" class="twitter-share-button" data-url="http://worrydream.com/Tangle/" data-count="none" data-via="worrydream">Tweet</a><script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script></p>
+
+
+</div> <!-- body -->
+
+
+<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+<!-- footer -->
+
+<div id="footer">
+<div id="footerShadow"></div>
+
+<div class="author"><a href="http://worrydream.com/">Bret Victor</a></div>
+
+<div class="menu">
+    <a href="guide.html">Getting Started</a> &nbsp; &nbsp;
+    <a href="reference.html">API Reference</a> &nbsp; &nbsp;
+    <a href="download.html">Download</a> &nbsp; &nbsp;
+    <a href="https://groups.google.com/group/tangle-talk/topics">Discuss</a>
+</div>
+
+</div> <!-- footer -->
+
+
+</div> <!-- everything -->
+</body></html>
