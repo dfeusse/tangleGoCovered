@@ -25,6 +25,9 @@
     	.estAnnualCost {
     		font-weight: bold;
     	}
+    	.weightingText {
+    		font-size: 12px;
+    	}
 
 	</style>
 
@@ -78,20 +81,44 @@
 		    <h4>Plans & Weighting</h4>
 		    <p>
 		    	Plan cost: <span data-var="planCost" data-format="$%d" class="TKAdjustableNumber" data-min="0.1" data-max="1"></span>.
-		    	Plan cost weight: <span data-var="planCost_weight" class="TKAdjustableNumber" data-min="0.1" data-max="20"></span>.
+		    	Plan cost weight: <span data-var="planCost_weight" class="TKAdjustableNumber" data-min="0.1" data-max="100"></span>.
 		    	<br>
 		    	Plan coverage: <span data-var="planCoverage" class="TKAdjustableNumber" data-min="0.1" data-max="1"></span>. 
-		    	Plan coverage weight: <span data-var="planCoverage_weight" class="TKAdjustableNumber" data-min="0.1" data-max="20"></span>.
+		    	Plan coverage weight: <span data-var="planCoverage_weight" class="TKAdjustableNumber" data-min="0.1" data-max="100"></span>.
 		    	<br>
 		    	Doc pref: <span data-var="docpref" class="TKAdjustableNumber" data-min="0.1" data-max="1"></span>.
-		    	Doc pref weight: <span data-var="docpref_weight" class="TKAdjustableNumber" data-min="0.1" data-max="20"></span>.
+		    	Doc pref weight: <span data-var="docpref_weight" class="TKAdjustableNumber" data-min="0.1" data-max="100"></span>.
 		    	<br>
 		    	Doc network: <span data-var="docNetwork" class="TKAdjustableNumber" data-min="0.1" data-max="1"></span>.
-		    	Doc network weight: <span data-var="docNetwork_weight" class="TKAdjustableNumber" data-min="0.1" data-max="20"></span>.
+		    	Doc network weight: <span data-var="docNetwork_weight" class="TKAdjustableNumber" data-min="0.1" data-max="100"></span>.
 		    	<br>
 		    	<b>Total score: </b><span data-var="total_score"></span>
 		    	<br>
 		    	<b>Total weight: </b><span data-var="total_weight"></span>
+		    	<br>
+		    	<span class="weightingText">*equal weighting</span>
+		    </p>
+
+		    <span> ----- </span>
+		    
+		    <p>
+		    	Plan cost: <span data-var="planCost_2" data-format="$%d" class="TKAdjustableNumber" data-min="0.1" data-max="1"></span>.
+		    	Plan cost weight: <span data-var="planCost_weight_2" class="TKAdjustableNumber" data-min="0.1" data-max="100"></span>.
+		    	<br>
+		    	Plan coverage: <span data-var="planCoverage_2" class="TKAdjustableNumber" data-min="0.1" data-max="1"></span>. 
+		    	Plan coverage weight: <span data-var="planCoverage_weight_2" class="TKAdjustableNumber" data-min="0.1" data-max="100"></span>.
+		    	<br>
+		    	Doc pref: <span data-var="docpref_2" class="TKAdjustableNumber" data-min="0.1" data-max="1"></span>.
+		    	Doc pref weight: <span data-var="docpref_weight_2" class="TKAdjustableNumber" data-min="0.1" data-max="100"></span>.
+		    	<br>
+		    	Doc network: <span data-var="docNetwork_2" class="TKAdjustableNumber" data-min="0.1" data-max="1"></span>.
+		    	Doc network weight: <span data-var="docNetwork_weight_2" class="TKAdjustableNumber" data-min="0.1" data-max="100"></span>.
+		    	<br>
+		    	<b>Total score: </b><span data-var="total_score_2"></span>
+		    	<br>
+		    	<b>Total weight: </b><span data-var="total_weight_2"></span>
+		    	<br>
+		    	<span class="weightingText">*custom weighting</span>
 		    </p>
 
 <!--
